@@ -8,27 +8,36 @@
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="flex-col bg-white">
+  <body class="bg-light flex-col">
     <header class="sticky top-0 z-10 p-2">
       <!-- Navigation -->
       <nav
-        class="bg-dark-blue flex items-center justify-between rounded-md p-2"
+        class="bg-dark-blue flex min-h-14 items-center justify-between rounded-md p-2"
         id="nav-desktop"
       >
         <img class="w-16" src="./assets/img/logo.png" alt="Logo Klivio" />
-        <img src="./assets/svg/menu.svg" alt="Hamburger menu icon" />
-        <nav-pc class="hidden">
-          <img src="./assets/img/logo.png" alt="Logo Klivio" />
+
+        <!-- Navigation pc-part -->
+        <nav-pc class="text-light flex w-full items-center justify-around">
           <p>Les formations</p>
-          <div id="search-bar">
+          <nav-search-bar
+            class="border-light w-100% flex w-full max-w-md justify-between rounded-md border p-1.5"
+            id="search-bar"
+          >
             <span>Rechercher</span>
             <img src="./assets/svg/search.svg" alt="search icon" />
-          </div>
-          <div>
-            <button>Connexion</button>
-            <button>Inscription</button>
-          </div>
+          </nav-search-bar>
+          <nav-buttons class="flex">
+            <button class="button">Connexion</button>
+            <button class="button">Inscription</button>
+          </nav-buttons>
         </nav-pc>
+
+        <img
+          class="hidden"
+          src="./assets/svg/menu.svg"
+          alt="Hamburger menu icon"
+        />
       </nav>
     </header>
 

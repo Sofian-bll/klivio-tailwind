@@ -48,3 +48,7 @@
   --font-weight-extrabold: 800;
   --font-weight-black: 900;
 }
+
+@layer components button {
+  @apply color-red;
+}
