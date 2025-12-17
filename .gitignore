@@ -1,8 +1,0 @@
-# IntelliJ project files
-.gitignore
-.idea
-*.iml
-out
-gen
-node_modules
-package-lock.json
