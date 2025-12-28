@@ -4,22 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Klivio Tailwind</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-light flex-col">
-    <header class="sticky top-0 z-10 p-2">
+  <body class="bg-light flex flex-col">
+    <header
+      class="sticky top-0 z-10 flex w-full content-center justify-center p-2"
+    >
       <!-- Navigation -->
       <nav
-        class="bg-dark-blue flex min-h-14 items-center justify-between rounded-md p-2"
+        class="bg-dark-blue drop-shadow-dark-80 flex h-20 w-full items-center justify-center rounded-lg p-4 lg:p-6"
         id="nav-desktop"
       >
-        <img class="w-16" src="./assets/img/logo.png" alt="Logo Klivio" />
+        <!-- Navigation mobile -->
+        <nav-mobile
+          class="text-light flex h-fit w-full items-center justify-between md:hidden"
+        >
+          <img class="w-20" src="./assets/img/logo.png" alt="Logo Klivio" />
+          <img src="./assets/svg/menu.svg" alt="Hamburger menu icon" />
+        </nav-mobile>
 
-        <!-- Navigation pc-part -->
-        <nav-pc class="text-light flex w-full items-center justify-around">
-          <p>Les formations</p>
+        <!-- Navigation pc -->
+        <nav-pc
+          class="text-light hidden w-full max-w-7xl items-center justify-between lg:flex"
+        >
+          <nav-logo-links class="flex justify-between gap-18">
+            <img class="w-16" src="./assets/img/logo.png" alt="Logo Klivio" />
+            <p>Les formations</p>
+          </nav-logo-links>
           <nav-search-bar
             class="border-light w-100% flex w-full max-w-md justify-between rounded-md border p-1.5"
             id="search-bar"
@@ -27,27 +39,27 @@
             <span>Rechercher</span>
             <img src="./assets/svg/search.svg" alt="search icon" />
           </nav-search-bar>
-          <nav-buttons class="flex">
-            <button class="button">Connexion</button>
-            <button class="button">Inscription</button>
+          <nav-buttons class="flex justify-end gap-2">
+            <button>Connexion</button>
+            <button class="btn-secondary">Inscription</button>
           </nav-buttons>
         </nav-pc>
-
-        <img
-          class="hidden"
-          src="./assets/svg/menu.svg"
-          alt="Hamburger menu icon"
-        />
       </nav>
     </header>
 
     <main>
       <!-- Hero -->
-      <section id="hero">
+      <section-hero
+        id="hero"
+        class="top-0 left-0 flex h-[calc(100svh-80px)] w-full flex-col bg-cover bg-center"
+      >
+        <bg-gradient
+          class="absolute top-0 right-0 bottom-0 left-0"
+        ></bg-gradient>
         <h1>Klivio, l'allié de votre progression</h1>
         <p>Les meilleures formations sur le développement personnel</p>
         <button>En savoir plus</button>
-      </section>
+      </section-hero>
 
       <!-- Formations Populaires -->
       <section id="popular">
@@ -390,6 +402,7 @@
       </section>
     </main>
 
+    <!--    <editor-fold desc="More...">-->
     <!-- Footer Desktop -->
     <footer id="footer-desktop">
       <div>
@@ -407,7 +420,7 @@
           </div>
           <address>
             <h4>Coordonnées</h4>
-            <div>
+            <adress-adresse>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -431,8 +444,8 @@
                 />
               </svg>
               <span>1 place république, 75003 Paris</span>
-            </div>
-            <div>
+            </adress-adresse>
+            <adresse-phone>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -448,8 +461,8 @@
                 />
               </svg>
               <span>01.02.03.04.05</span>
-            </div>
-            <div>
+            </adresse-phone>
+            <adress-email>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -475,7 +488,7 @@
                 />
               </svg>
               <span>contact@klivio.fr</span>
-            </div>
+            </adress-email>
           </address>
         </nav>
         <div>
@@ -635,5 +648,6 @@
         </div>
       </address>
     </footer>
+    <!--    </editor-fold>-->
   </body>
 </html>

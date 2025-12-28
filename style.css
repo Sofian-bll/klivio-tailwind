@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "tailwindcss";
 @tailwind utilities;
+
 @theme {
   /* COLORS */
   --color-light: #ffffff;
@@ -11,7 +12,9 @@
   --color-dark-80: rgba(0 0 0 / 0.8);
   --color-yellow: #ffc700;
   --color-yellow-30: rgba(255 199 0 / 0.3);
-  --linear-gradient: linear-gradient(
+
+  /* Gradient - définir comme image de fond */
+  --color-gradient: linear-gradient(
     94deg,
     rgba(68, 221, 138, 0.8) 3.11%,
     rgba(21, 183, 226, 0.8) 98.45%
@@ -49,6 +52,15 @@
   --font-weight-black: 900;
 }
 
-@layer components button {
-  @apply color-red;
+@layer components {
+  button {
+    @apply bg-light text-dark flex h-fit w-fit items-center justify-center rounded-md px-6 py-2 shadow-lg;
+  }
+  .btn-secondary {
+    background-image: var(--color-gradient);
+  }
+
+  bg-gradient {
+    background-image: var(--color-gradient);
+  }
 }
