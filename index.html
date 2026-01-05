@@ -7,39 +7,24 @@
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
 
-  <body class="bg-light flex flex-col">
-    <header
-      class="sticky top-0 z-10 flex w-full content-center justify-center p-2"
-    >
-      <!-- Navigation -->
-      <nav
-        class="bg-dark-blue drop-shadow-dark-80 flex h-20 w-full items-center justify-center rounded-lg p-4 lg:p-6"
-        id="nav-desktop"
-      >
-        <!-- Navigation mobile -->
-        <nav-mobile
-          class="text-light flex h-fit w-full items-center justify-between md:hidden"
-        >
-          <img class="w-20" src="./assets/img/logo.png" alt="Logo Klivio" />
+  <body>
+    <header>
+      <nav>
+        <nav-mobile>
+          <img src="./assets/img/logo.png" alt="Logo Klivio" />
           <img src="./assets/svg/menu.svg" alt="Hamburger menu icon" />
         </nav-mobile>
 
-        <!-- Navigation pc -->
-        <nav-pc
-          class="text-light hidden w-full max-w-7xl items-center justify-between lg:flex"
-        >
-          <nav-logo-links class="flex justify-between gap-18">
-            <img class="w-16" src="./assets/img/logo.png" alt="Logo Klivio" />
+        <nav-pc>
+          <nav-logo-links>
+            <img src="./assets/img/logo.png" alt="Logo Klivio" />
             <p>Les formations</p>
           </nav-logo-links>
-          <nav-search-bar
-            class="border-light w-100% flex w-full max-w-md justify-between rounded-md border p-1.5"
-            id="search-bar"
-          >
+          <nav-search-bar>
             <span>Rechercher</span>
             <img src="./assets/svg/search.svg" alt="search icon" />
           </nav-search-bar>
-          <nav-buttons class="flex justify-end gap-2">
+          <nav-buttons>
             <button>Connexion</button>
             <button class="btn-secondary">Inscription</button>
           </nav-buttons>
@@ -49,13 +34,8 @@
 
     <main>
       <!-- Hero -->
-      <section-hero
-        id="hero"
-        class="top-0 left-0 flex h-[calc(100svh-80px)] w-full flex-col bg-cover bg-center"
-      >
-        <bg-gradient
-          class="absolute top-0 right-0 bottom-0 left-0"
-        ></bg-gradient>
+      <section-hero>
+        <bg-gradient></bg-gradient>
         <h1>Klivio, l'allié de votre progression</h1>
         <p>Les meilleures formations sur le développement personnel</p>
         <button>En savoir plus</button>
@@ -74,6 +54,84 @@
             <p>Sonia Lefèvre | Coach prise de parole</p>
             <div>★★★★★</div>
             <p>Gagnez en aisance et captez votre auditoire</p>
+          </article>
+          <article>
+            <div>
+              <span>15,99 €</span>
+              <s>60 €</s>
+            </div>
+            <h3>Gérer le stress</h3>
+            <p>Lucie Garnier | Formatrice</p>
+            <div>★★★★☆</div>
+            <p>Apprenez à rester serein face aux défis</p>
+          </article>
+          <article>
+            <div>
+              <span>15,99 €</span>
+              <s>60 €</s>
+            </div>
+            <h3>Travailler en équipe</h3>
+            <p>David Moreau | Expert</p>
+            <div>★★★★★</div>
+            <p>Collaborez efficacement, même à distance</p>
+          </article>
+          <article>
+            <div>
+              <span>15,99 €</span>
+              <s>60 €</s>
+            </div>
+            <h3>Gérer son temps</h3>
+            <p>Claire Dumas | Coach organisation</p>
+            <div>★★★★☆</div>
+            <p>Optimisez vos journées et gagnez en efficacité</p>
+          </article>
+        </div>
+        <button>Voir plus de formations</button>
+      </section>
+
+      <!-- Formations Récentes -->
+      <section id="recent">
+        <h2>Les formations récentes</h2>
+        <div>
+          <article>
+            <div>
+              <span>15,99 €</span>
+              <s>60 €</s>
+            </div>
+            <h3>Mieux communiquer</h3>
+            <p>Julien Martel | Coach en comm.</p>
+            <div>★★★★★</div>
+            <p>Améliorez vos échanges et votre impact relationnel</p>
+          </article>
+          <article>
+            <div>
+              <span>15,99 €</span>
+              <s>60 €</s>
+            </div>
+            <h3>Maîtriser ses émotions</h3>
+            <p>Amel Benali | Psy. du travail</p>
+            <div>★★★★★</div>
+            <p>Gardez le contrôle en toutes circonstances</p>
+          </article>
+          <article>
+            <div>
+              <span>15,99 €</span>
+              <s>60 €</s>
+            </div>
+            <h3>Cultiver la confiance</h3>
+            <p>Sophie Renard | Thérapeute</p>
+            <div>★★★★★</div>
+            <p>Renforcez votre estime de vous au quotidien</p>
+          </article>
+          <article>
+            <div>
+              <span>15,99 €</span>
+              <s>60 €</s>
+            </div>
+            <h3>Développer son leadership</h3>
+            <p>Pierre Dubois | Manager senior</p>
+            <div>★★★★☆</div>
+            <p>Inspirez et guidez vos équipes vers le succès</p>
           </article>
         </div>
         <button>Voir plus de formations</button>
@@ -402,7 +460,6 @@
       </section>
     </main>
 
-    <!--    <editor-fold desc="More...">-->
     <!-- Footer Desktop -->
     <footer id="footer-desktop">
       <div>
@@ -648,6 +705,5 @@
         </div>
       </address>
     </footer>
-    <!--    </editor-fold>-->
   </body>
 </html>
